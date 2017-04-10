@@ -50,7 +50,8 @@
 		</tbody>
 	</table>
 
-
+	<br>
+<!-- 
 	<form action= "/update_first_name" method= "post">
 		<input type ="text" name="first_name_update"><br>
 		<input type ="text" name="first_name"><br>
@@ -97,4 +98,23 @@
 		<input type ="text" name="home_phone_update"><br>
 		<input type ="text" name="home_phone"><br>
 		<input type = "submit" value = "Update Home Phone">
-	</form>
+	</form> -->
+
+	<form action='/update_column' method='post'>
+
+   		<select name='table_column'>
+			<option value='col_first_name'>First Name</option>
+			<option value='col_last_name'>Last Name</option>
+			<option value='col_address'>Street Address</option>
+			<option value='col_city'>City</option>
+			<option value='col_state'>State</option>
+			<option value='col_zip'>Zip</option>
+			<option value='col_cell'>Cell Number</option>
+			<option value='col_home'>Home Number</option>
+		</select>
+		<br>
+
+	   	<input type="text" name="new_data"><br>
+	   	<input type="text" name="old_data"><br>
+	   	<input type="submit" value="Update">
+   </form>
