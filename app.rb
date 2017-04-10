@@ -92,25 +92,3 @@ db_params = {
 			WHERE home_phone = '#{home_phone}' ");
 		redirect '/'
 	end
-
-
-# Alex Neish
-# 	Unknown 1A
-# 	Unknown 1B
-# 	Unknown 1C
-# 	Unknown 1D
-# 	Unknown 1E
-# 	Unknown 1F
-
-# Kevin Killeen
-# 	Unknown 2A
-# 	Unknown 2B
-# 	Unknown 2C
-# 	Unknown 2D
-# 	Unknown 2E
-# 	Unknown 2F
-
-post '/delete_all' do
-	db.exec("TRUNCATE phonebook");
-	redirect '/'
-end
