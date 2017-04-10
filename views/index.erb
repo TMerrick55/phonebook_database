@@ -1,0 +1,100 @@
+<form method="post" action="/phonebook">
+
+	<input type="text" name="first_name"> First Name
+	<br>
+	<input type="text" name="last_name"> Last Name
+	<br>
+	<input type="text" name="street_address"> Street Address
+	<br>
+	<input type="text" name="city"> City
+	<br>
+	<input type="text" name="state"> State
+	<br>
+	<input type="text" name="zip"> Zip
+	<br>
+	<input type="text" name="cell_phone"> Cell Phone
+	<br>
+	<input type="text" name="home_phone"> Home Phone
+	<br>
+	<input type="submit" name= 'Upload Now'>
+
+</form>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Street Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+				<th>Cell Phone</th>
+				<th>Home Phone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%phonebook.each do |contacts|%>            
+				<tr>       
+
+				<td><%=contacts["first_name"] %></td>
+				<td><%=contacts["last_name"] %></td>
+				<td><%=contacts["street_address"] %></td>
+				<td><%=contacts["city"] %></td>       
+				<td><%=contacts["state"] %></td>       
+				<td><%=contacts["zip"] %></td>
+				<td><%=contacts["cell_phone"] %></td>
+				<td><%=contacts["home_phone"] %></td>                 
+				</tr>            
+			<%end%>        
+		</tbody>
+	</table>
+
+
+	<form action= "/update_first_name" method= "post">
+		<input type ="text" name="first_name_update"><br>
+		<input type ="text" name="first_name"><br>
+		<input type = "submit" value = "Update First Name">
+	</form>
+
+	<form action= "/update_last_name" method= "post">
+		<input type ="text" name="last_name_update"><br>
+		<input type ="text" name="last_name"><br>
+		<input type = "submit" value = "Update Last Name">
+	</form>
+
+	<form action= "/update_street_address" method= "post">
+		<input type ="text" name="street_address_update"><br>
+		<input type ="text" name="street_address"><br>
+		<input type = "submit" value = "Update Street Address">
+	</form>
+
+	<form action= "/update_city" method= "post">
+		<input type ="text" name="city_update"><br>
+		<input type ="text" name="city"><br>
+		<input type = "submit" value = "Update City">
+	</form>
+
+	<form action= "/update_state" method= "post">
+		<input type ="text" name="state_update"><br>
+		<input type ="text" name="state"><br>
+		<input type = "submit" value = "Update State">
+	</form>
+
+	<form action= "/update_zip" method= "post">
+		<input type ="text" name="zip_update"><br>
+		<input type ="text" name="zip"><br>
+		<input type = "submit" value = "Update Zip">
+	</form>
+
+	<form action= "/update_cell_phone" method= "post">
+		<input type ="text" name="cell_phone_update"><br>
+		<input type ="text" name="cell_phone"><br>
+		<input type = "submit" value = "Update Cell Phone">
+	</form>
+
+	<form action= "/update_home_phone" method= "post">
+		<input type ="text" name="home_phone_update"><br>
+		<input type ="text" name="home_phone"><br>
+		<input type = "submit" value = "Update Home Phone">
+	</form>
